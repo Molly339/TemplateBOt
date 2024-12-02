@@ -6,18 +6,19 @@ public class Main {
         System.out.println("Welcome to P.M. Café!");
         System.out.println("I am happy to assist you on your journey today!");
         System.out.println("Here's what you can ask:");
-        wonder(); 
+        
         askQuestion(new Scanner(System.in));
     }
 
-    public static void wonder() {
+    
+
+    public static void askQuestion(Scanner scanner) {
+        
         System.out.println("1. Type 'Menu' to see what drinks and snacks we offer!");
         System.out.println("2. Type 'Hours' to see when we are open!");
         System.out.println("3. Type 'Location' to find where we are located.");
         System.out.println("4. Otherwise, type 'Exit' to leave.");
-    }
-
-    public static void askQuestion(Scanner scanner) {
+    
         System.out.print("What would you like to know? ");
         String input = scanner.nextLine().toLowerCase();
 
@@ -65,7 +66,7 @@ public class Main {
         }
 
 
-        System.out.print("Please type the name of the item you'd like to order or know more about: ");
+        System.out.print("Please type the name of the item you'd like to order or know more /about: ");
         String itemChoice = scanner.nextLine().toLowerCase();
         for (String item : items) {
             if (item.toLowerCase().contains(itemChoice)) {
@@ -264,7 +265,7 @@ public class Main {
                 
                 else if (y.equalsIgnoreCase("no")){
                     System.out.println("Thats okay! Would you like to explore any of our other options?");
-                    wonder();
+                    
                     askQuestion(scanner);
                 }
             }
